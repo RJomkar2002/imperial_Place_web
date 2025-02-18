@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style  type="text/css">
+body{
+    box-sizing: border-box;
+    }
+
+.container {
+  position:absolute;
+  right: 500px;
+  top: 150px;
+  width: 570px;
+  height: calc(95% - 40px);
+  padding-bottom: 20px;
+ background: #f2f2f2;
+  z-index: 1;
+  padding: 1%;
+  padding-top:3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+/* box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);*/
+}
+
+input[type=text] {
+  width: 100%;
+  height: 5px;
+  padding: 10px 10px;
+  background:#f2f2f2;
+  margin: 4px 0;
+/*  box-sizing: border-box;*/
+ border: none;
+  border-bottom: 1px solid black;
+}
+
+input[type=email] {
+  width: 100%;
+  height: 5px;
+  padding: 12px 10px;
+    background: #f2f2f2;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+textarea {
+ width: 300px;
+ height: 100px;
+ border-color:#000000;
+ font-size: 1em;
+ font-weight: bold;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border: 2px solid black;
+}
+
+.container h3{
+    padding:2px;
+
+}
+/*.container .contactInfo
+{
+    position:absolute;
+    right: 30px;
+    top: 0px;
+    width: 500px;
+    height: calc(40% - 40px);
+    background:  #bff2e6;
+    z-index: 1;
+    padding: 30px;
+    padding-left:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(10, 10, 0, 0.15);
+}*/
+
+#icon1 {
+    width: 40px;
+min-width: 40px;   
+ }
+
+.header {
+    margin-top: 5px;
+    padding: 20px;
+    padding-left:100px;
+}
+
+.footer img{
+    width: 450px;
+    height: 450px;
+    padding: 5px;
+    margin-right:40px;
+/*    position: center;*/
+/*    object-position: 2ch 1em;*/
+    float: left;    
+ margin-left:730px;
+ display: flex;
+
+}
+.btn-cool-blues {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+}
+  </style>
+
+</head>
+<body>
+         <form method="post" action="contactusinsert.jsp" onsubmit="return validate()"> 
+<div class="header">
+
+    <div class="col-sm-4">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <span><img src="locc.png" id="icon1"></span>
+            </div>&nbsp;
+                 <p><b>Address:</b>166a/B type Sindhu vihar, jule solapur, vijayapur road, Solapur 413004.</p>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <span><img src="phone.png" id="icon1"></span>
+            </div>&nbsp;
+                <p><b>Phone:</b>+ 9049410232</p>
+        </div>
+
+    </div>
+
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <span><img src="mail.png" id="icon1"></span>
+            </div>&nbsp;
+                <p><b>Email:</b>omkarramgirwar00@gmail.com</p>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ------------------------------------------FORM---------------------------------------------->
+<div class="container" >
+    <div class="contactInfo">
+    <h3 align="center" id="contact">Contact Us</h3>
+
+<br>
+        <div class="row">
+            <div class="col-sm-12">
+            </div>
+                <div class="col-sm-6"><font color=" #000000"> 
+                     FULL NAME</font>
+                </div>
+                <div class="col-sm-6"> <font color=" #000000"> 
+                 EMAIL ADDRESS</font><sup class="text-danger"> *</sup>
+                </div>
+  
+         </div>  
+
+        <div class="row" >
+            <div class="col-sm-12"> 
+            </div>
+               <div class="col-sm-6">
+                 <input type="text" class="form-control" id="nme" name="txtname" placeholder="Name">
+                </div>
+                 <div class="col-sm-6">
+                     <input type="email"  class="form-control" id="email" name="txtemail" placeholder="Enter Email"> 
+         </div>
+
+</div> 
+
+<div class="row">
+    <div class="col-sm-12"><font color=" #000000"> 
+        SUBJECT</font> </div>
+  
+</div>  
+
+<div class="row" >
+    <div class="col-sm-12">
+          <input type="text" class="form-control" name="txtsub" placeholder="Subject">
+            <p id="b"></p>
+    </div>
+    
+</div> 
+
+<div class="row">
+    <div class="col-sm-12"><font color=" #000000"> 
+        MESSAGE</font> </div>
+  
+</div>  
+
+<div class="row" >
+    <div class="col-sm-12">
+          <textarea class="form-control" rows="5" cols="10" name="txtmsg" style="background-color: #f2f2f2;"></textarea>
+            <!-- <p id="b"></p> -->
+    </div>
+    &nbsp;
+    
+</div> 
+    <div class="col-sm-12" align="center">
+<!--        <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">-->
+<input type="submit" value="Send Message" class="col btn btn-cool-blues btn-rounded">
+<!--<span class="submitting"></span>-->
+    </div>
+
+    
+</div> 
+</div>
+</form>
+
+<!-- <div class="row">
+    <div class="footer">
+                <span><img src="contimg.png" id="img"></span>
+            </div>
+        </div>-->
+
+
+</body>
+</html>
+
+<!--.category added
+cont..position-relative
+submit;display-flex.-->

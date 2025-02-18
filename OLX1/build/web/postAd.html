@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>;
+</script>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;
+   padding-left:9px;}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size:15px;
+}
+/*
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}*/
+.container {
+    margin-left:40px;
+  position:absolute;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 60%;
+}
+.container1 {
+  float:right;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 25%;
+  margin-right:50px;
+  text-align: justify;
+    text-justify: inter-word;
+ 
+
+}
+span{
+  display: block;
+  width: 50px;
+  height: 44px;
+  margin-top: 6px;
+}
+option { direction: ltr; }
+option{
+    font-size: 10px;
+}
+.text-center h5 {
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+/*background-color: rgb(30, 173, 255);*/
+ background: linear-gradient(to top left, #996633 0%, #ccffff 100%);
+border: none;
+color: white;
+padding: 1px 8px;
+font-size: 7px;
+  
+cursor: pointer;
+width:30%;
+height: 50px;
+position: relative;
+align-content: center;
+align:center;
+border-radius: 8px;
+
+}
+option{
+    width:30%;
+    height: 50px;
+font-size:15px;
+    background-color:#f1d9bd;
+}
+.teal-color {
+padding: 2px;
+color: #f1d9bd;
+}
+
+/*button:hover i {
+color:#87695f;
+}*/
+ #stage {
+ background-image: linear-gradient(to right, #04AA6D 0%,#4CA1AF 0%, #D6A4A4  51%, #DAE2F8  100%);
+/*     background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);*/
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  margin: 7px;
+ margin-bottom: 5px;
+  padding: 13px 17px;
+  text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+ color: white;            
+/*color:#007991;*/
+ box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 140px;
+  height: 50px;
+  position:relative;
+ align-content: center;
+  font-size: 15px;
+}
+#stage:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+   }
+</style>
+</head>
+<body style="background-color:lightseagreen;"> 
+
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post An Advertise</h4>
+
+
+<!--------------------------------- Container ------------------------------------------->
+
+<div class="container" >
+    <form action="insertpostadd.jsp"> 
+        
+        <h5 class='far fa-calendar-check'>&nbsp;<b>Add Details</b></h5>
+        <hr>
+        
+       <div class="text-center">
+                 
+<h5 > <select id="cat" name="txtcat">
+    <option value="">Choose Category</option>
+      <option>Cars & Bikes</option>
+      <option>Aesthetics</option>
+      <option>Beauty</option>
+      <option>Mobiles & Tablets</option>
+      <option>Electronics-Appliances</option>
+      <option>Sporting goods, Exercise</option>
+      <option>Furniture</option>
+      <option>Antiques</option>
+      <option>Shoes</option>
+      <option>Stuffs for Babies</option>
+      <option>Clothing, Fashion & Accessories</option>
+       <option>Toys - Games - Figurines</option>
+      <option>Music</option>
+      <option> DIY - Gardening</option>
+    </select>
+       
+</h5>
+       </div>
+<!--       </div>-->
+        <br>
+      <b><label for="fname">Ad title</label></b>
+    <input type="text" id="fname" name="txttitle" 
+     placeholder="Mention the key features of your item (e.g. brand, model, age, type)">
+
+    <b> <label for="subject">Description</label></b>
+    <textarea id="des" name="des" placeholder="Tell us more about your advertise.." style="height:200px"></textarea>
+
+<!--------------------------------------- Price ---------------------------------------->
+        <b><label class="form-label">Price</label></b>
+  <div class="input-group">
+      
+         <span class="input-group-text">&#8377;</span>
+        <input type="text" name="txtprice" class="form-control" aria-label="Amount" >
+    <div class="input-group-append">
+    </div>
+  </div>
+        
+ <!------------------------------------- City ---------------------------------------->
+
+        
+        <b><label for="lname">City</label></b>
+    <input type="text" id="city" name="txtcity" placeholder="add city" >
+    
+<!--------------------------------------- Country ---------------------------------------->
+
+    <b> <label for="country">Country</label></b>
+    <select id="country" name="txtcountry">
+      <option>India</option>
+      <option>Australia</option>
+      <option>Canada</option>
+      <option>Sri Lanka</option>
+      <option>Bhutan</option>
+      <option>Nepal</option>
+      <option>Myanmar</option>
+      <option>USA</option>
+
+      </select>
+  
+    
+     <p align="center">
+         <input type="submit" value="Post An Add" id="stage">
+    <input type="button" onclick="document.location='merchantDashboard.jsp'"  id="stage" name="Home" value="Dashboard" class="btn btn-info btn-sm">
+        </p>
+        
+  </form>
+</div>
+
+<div class="container1">
+
+    <h5 class='fa fa-exclamation-circle'>&nbsp;Tips</h5><br>
+            <hr>
+<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Enter a brief description of the advertise.<br>
+<i class="fa fa-check" aria-hidden="true"></i> &nbsp;&nbsp;Add your product photo.<br>
+<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Choose the correct category of the ad.<br>
+<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Check again before submit the ad.
+
+</div>
+
+
+
+</body>
+</html>
+
+
+<!--.category added
+container..position-relative
+submit;display-flex.-->

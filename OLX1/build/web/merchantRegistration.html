@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+  	body{
+  		background-image:url(cust10.jpg);
+  		background-size:cover  
+  	}
+  </style>
+  <script type="text/javascript">
+  function validate()
+		{
+			var p=document.forms[0].elements[0].value;
+			if(p==null || p=="")
+			{
+				document.getElementById("a").innerHTML="<font color=red> Fill your name </font>";
+				return false;
+			}
+
+			var q=document.forms[0].elements[1].value;
+			if(q==null || q=="")
+			{
+				document.getElementById("b").innerHTML="<font color=red> Fill email id  </font>";
+				return false;
+			}
+			
+			var r=document.forms[0].elements[2].value;
+			var s=document.forms[0].elements[3].value;
+
+			if(r==null || r=="")
+			{
+				document.getElementById("c").innerHTML="<font color=red> Fill Password  </font>";
+				return false;
+			}
+			if(r.length<6)
+			{
+				document.getElementById("c").innerHTML="<font color=red>Password must be more than 6 characters </font>";
+				return false;
+			}
+			if(r!=s)
+			{
+				document.getElementById("c").innerHTML="<font color=red>Password not match  </font>";
+				return false;
+			}
+
+			var t=document.forms[0].elements[4].value;
+			if(t.length!=10)
+			{
+				document.getElementById("d").innerHTML="<font color=red> Fill Mobile Number</font>";
+				return false;
+			}
+
+			var u=document.forms[0].elements[5].value;
+			if(u.length!=12)
+			{
+				document.getElementById("e").innerHTML="<font color=red> Fill Aadhaar Number</font>";
+				return false;
+			}
+
+			var v=document.forms[0].elements[6].value;
+			if(v==null || v=="")
+			{
+				document.getElementById("f").innerHTML="<font color=red> Fill your DOB </font>";
+				return false;
+			}
+
+
+			var y=document.forms[0].elements[11].value;
+			if(y==null || y=="")
+			{
+				document.getElementById("g").innerHTML="<font color=red> Fill Transaction Id </font>";
+				return false;
+			}
+			return true;
+  	}
+
+		 	function transfer() 
+		{
+
+		var w=document.getElementById("x");
+		 	if(w.checked==true)
+		 	{
+				document.forms[0].elements[9].value=document.forms[0].elements[7].value;
+		}
+		 	if(w.checked==false)
+		 	{
+		 		document.forms[0].elements[9].value="";
+		 	}
+
+		 }		// 9,7
+  </script>
+  
+</head>
+<body>
+	<form action="merchantreg.jsp" onsubmit="return validate()">
+
+<h1 align="center"><font color="#ffffb3"> Merchant Registration </h1>
+<h5 align="center">All kinds of payment accepted on 9021886542 </h5></font>
+
+<div class="row">
+	<div class="col-sm-1"></div>
+
+	<div class="col-sm-4">   <h4><font color=" #66ffff"> Fullname </font>
+		<sup class="text-danger"> *</sup></h4>
+	</div>
+				
+
+</div>	
+
+<div class="row" >
+	<div class="col-sm-1"> </div>
+	<div class="col-sm-3"><h4>
+		<font color="#ffffb3"> 
+		Firstname  </font><sup class="text-danger"> *</sup></h4></div>
+	<div class="col-sm-3"><h4>
+		<font color=" #ffffb3"> 
+		Middlename </font><sup class="text-danger"> *</sup></h4></div>
+	<div class="col-sm-3"><h4>
+		<font color=" #ffffb3"> 
+		 Lastname </font><sup class="text-danger"> *</sup></div></h4>
+</div>	
+
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-9"> <input type="text" class="form-control" placeholder="Enter Fullname" name="txtname"><p id="a"></p> </div>
+</div>	
+<br>
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Email-Id </font><sup class="text-danger"> *</sup></h4>
+	</div>
+	<div class="col-sm-3">  <h4><font color=" #ffffb3"> 
+		Password </font><sup class="text-danger"> *</sup></h4>
+	</div>
+	<div class="col-sm-3">  <h4><font color=" #ffffb3"> 
+		Confirm Password  </font><sup class="text-danger"> *</sup></h4>
+	</div>
+</div>	
+
+<div class="row" >
+	<div class="col-sm-1"> </div>
+	<div class="col-sm-3">
+		  <input type="email" class="form-control" placeholder="Enter Email-Id " name="txtemail">
+		  	<p id="b"></p>
+		</div>
+	<div class="col-sm-3">
+		<input type="password" class="form-control" placeholder="Enter Password" name="txtpass"> 
+		<p id="c"></p>
+	</div>
+	<div class="col-sm-3">
+		<input type="password" class="form-control" placeholder="Confirm Password" name="txtpass">
+			<p id="c"></p>
+</div>
+</div>	
+<br>
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Mobile Number  </font><sup class="text-danger"> *</sup></h4>
+	</div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Aadhaar No.  </font><sup class="text-danger"> *</sup></h4>
+	</div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Date of Birth </font><sup class="text-danger"> *</sup></h4>
+	</div>
+</div>	
+
+<div class="row" >
+	<div class="col-sm-1"> </div>
+	<div class="col-sm-3">
+		  <input type="text" class="form-control" placeholder="Enter MobileNo" name="txtmobieno" >
+		  <p id="d"></p>
+		</div>
+	<div class="col-sm-3">
+		<input type="text" class="form-control" placeholder="Enter AadharNo."name="txtadhno"> 
+		<p id="e"></p> </div>
+	<div class="col-sm-3">
+		<input type="date" class="form-control" placeholder="Enter DOB" name="txtdob">
+		<p id="f"></p></div>
+</div>	
+
+<br>
+
+
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Current Address </font></h4>
+	</div>
+
+	<div class="col-sm-3"> 
+		
+	</div>
+	
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Permanent Address </font></h4>
+	</div>
+	
+</div>	
+
+<div class="row" >
+	<div class="col-sm-1"> </div>
+	<div class="col-sm-3">
+		  <textarea class="form-control" name="txtcadd" ></textarea></div>
+
+<div class="col-sm-3" align="center">
+		<input  class="larger" type="checkbox" id="x" onclick="transfer()"> 
+	</div>
+
+	<div class="col-sm-3">
+		<textarea class="form-control" name="txtpadd" ></textarea></div>	
+</div>	
+<br>
+
+<!--<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Payment Type </font></h4>
+	</div>
+	<div class="col-sm-3">  <h4><font color=" #ffffb3"> 
+		Transaction ID      </font></h4>
+	</div>
+	<div class="col-sm-3"> <h4><font color=" #ffffb3"> 
+		Registration Charges  </font></h4>
+	</div>
+</div>	
+
+<div class="row" >
+	<div class="col-sm-1"> </div>
+	<div class="col-sm-3">
+		<select class="form-control" name="ptype">
+			<option value="1"> GPay</option>
+			<option value="2"> PhonePe</option>
+			<option value="3"> Paytm</option>
+			<option value="4"> AmazonPay</option>
+
+	</select>
+</div>
+	<div class="col-sm-3">
+		<input type="text" name="txttid" class="form-control" placeholder="Enter Transaction ID" class="form-control" ><p id="g"></div>
+	<div class="col-sm-3">
+            <input type="text" name="txtrch" class="form-control" value="1000" class="form-control" readonly ></div>
+	<br>
+</div>-->
+<br>
+<div class="row" >
+    <div class="col-sm-4"></div>
+	<div class="col-sm-2">
+           <button type="Submit" value="submit" class="btn btn-info btn-lg" ><font color=" #002db3"> Submit </button>
+
+           </div>
+	<div class="col-sm-3">
+<!--            <button type="Submit" class="btn btn-info btn-sm"><a href=""><font color=" #002db3"> Home </button></a></div>-->
+<input type="button" style="color:blue" onclick="document.location='body2.html'" name="Home" value="Home" class="btn btn-info btn-lg">
+
+
+</div>
+</form>
+</body>
+</html>
